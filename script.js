@@ -6,8 +6,11 @@ let highScore = 0;
 let roundCount = 0;
 let winFlag = false;
 
-function reset(scoreReset, setNewSecretNumber, lost, roundReset) {
-    if (!secretNumber || setNewSecretNumber) secretNumber = Math.floor(Math.random() * 20 + 1);
+function reset(scoreReset, setNewSecretNumber, lost) {
+    if (!secretNumber || setNewSecretNumber){ 
+        document.querySelector('.message').textContent = "Start guessing...";
+        secretNumber = Math.floor(Math.random() * 20 + 1);
+    };
     if (scoreReset) {
         score = 20;
         document.querySelector('.score').textContent = 20;
