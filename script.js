@@ -17,7 +17,7 @@ const againButton = document.querySelector('.again');
 const checkButton = document.querySelector('.check');
 
 function reset(scoreReset, setNewSecretNumber, lost) {
-    if (!secretNumber || setNewSecretNumber){ 
+    if (!secretNumber || setNewSecretNumber) {
         messageElement.textContent = "Start guessing...";
         secretNumber = Math.floor(Math.random() * 20 + 1);
     };
